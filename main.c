@@ -2,11 +2,11 @@
 global_var var_global;
 /**
  * main - driver function for monty program
- * @ac: int num of arguments
- * @av: opcode file
+ * @argc: int num of arguments
+ * @argv: opcode file
  * Return: 0
  */
-int main(int ac, char **av)
+int main(int argc, char *argv[])
 {
 	stack_t *stack;
 
@@ -18,7 +18,7 @@ int main(int ac, char **av)
 	}
 
 	read_file(av[1], &stack);
-    /* recordar liberar memorias */
 	free_dlistint(stack);
+
 	return (0);
 }
